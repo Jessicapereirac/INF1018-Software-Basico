@@ -1,0 +1,43 @@
+JESSICA PEREIRA CESARIO 1711179 3WA 
+
+O trabalho Gerador de código foi implementado em cima da main, disponibilizada pelo enunciado do trabalho, sendo transformada de uma main para a função geracod. 
+A partir de um arquivo .s e do objdump fomos colocando cada instrução correspondente as possíveis instruções da linguagem SB. 
+
+TESTES:
+
+Testamos as possibilidades mais simples primeiro, a partir do desenvolvimento do código e das partes (atribuição, soma, subtração, multiplicação, if, go e retorno).
+
+	vx := $1
+	vx := vx
+	vx := px
+	px := vx
+	px := $1
+
+	vx (-)(*)(+)= $1
+	vx (-)(*)(+)= vx
+	vx (-)(*)(+)= px
+	px (-)(*)(+)= vx
+	px (-)(*)(+)= $1
+	
+	ret px/vx
+
+Nos casos que não eram possíveis trabalha com o valor em memória passamos esse valor para o registrador %r9d.
+ 
+Para if e go além dos casos do enunciado fizemos casos mais simples como:	
+	ex1:
+
+vx := $1
+	if vx 3 4
+	ret p1
+	ret p2
+	
+	ex2:
+
+	px += $1
+	go 3
+	px += $1
+	ret px
+		
+-	onde x é um número de 1 á 4	
+
+No geral, todos os testes feitos tiveram os resultado esperados.

@@ -1,0 +1,57 @@
+Relatório Primeiro Trabalho 
+
+Turma 3WA
+Grupo: Jéssica Pereira Cesario.
+
+Funções:
+
+	big_val(BigInt res, long val) - funcionando.
+	big_comp2(BigInt res, BigInt a) - funcionando.
+	big_sum(BigInt res, BigInt a, BigInt b) - funcionando.
+	big_sub(BigInt res, BigInt a, BigInt b) - funcionando.
+	big_shl(BigInt res, BigInt a, int n) - funcionando.
+	big_shr (BigInt res, BigInt a, int n) - funcionando.
+	big_mul (BigInt res, BigInt a, BigInt b) - funcionando.
+
+Testes:
+
+	Valores inteiros decimais, hexadecimais, positivos e negativos na multiplicação
+		Valores testados:
+		  50 * 150 = 00000000000000000000000000001d4c;
+		 -50 * 150 = ffffffffffffffffffffffffffff2eb4; 
+		 -50 *-150 = 00000000000000000000000000004c1d;
+		 50a * 150 = 0000000000000000000000000002f3dc;
+		 50a * -150 = ffffffffffffffffffffffffffdfc042;
+		  
+	
+	Valores inteiros decimais, hexadecimais, positivos e negativos na soma
+		Valores testados:
+		  352ec3a6779+(-7) = 00000000000000000000352ec3a6772;
+		  0x01 + 2 = 000000000000000000000000000003;
+	
+	Para o complemento a 2
+		Valores testados:
+          	  0x000000000000ff00 = ffffffffffffffffffffffffffff0100;
+		  0xffffffffffffffff = 00000000000000000000000000000001
+		
+
+	Para a subtração
+		Valores testados:
+		  0x01 - 2 = ffffffffffffffffffffffffffffffff;
+		  30 - (-2) = 000000000000000000000000000020;	
+	levando em consideração que nessa função a ordem importa
+
+
+	Shift right e Shift left
+		valor testado:
+		  0x80ffff000f00ff00, shr com n=3 = 1ffffffffffffffff01fffe001e01f
+		  chamo shl com o valor que shr devolve com n=3, e a resposta é o numero inserido no inicio
+
+	Valor nulo (0)
+		  resultado sempre 0
+
+
+	
+	
+
+
